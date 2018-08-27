@@ -768,6 +768,14 @@ a.badge:active {
 	box-shadow: none!important;
 }
 
+.notify--error {
+    display: none;
+}
+
+.error--hiden {
+    display: none;
+}
+
 .form-checkbox {
 	display: inline-block;
 	margin-right: 5px;
