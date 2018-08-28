@@ -1,12 +1,11 @@
 $(document).ready(function(){
    (function() {
-
 		var formLoginValidation = {
 			isValid: true,
 			init: function(){
 
-				// вызов внутренних функций
-				this._setUpListeners();
+            // вызов внутренних функций
+            this._setUpListeners();
 			},
 			_setUpListeners: function(){
 				$('#login-add-form').on('submit', formLoginValidation._validateForm);
@@ -37,23 +36,23 @@ $(document).ready(function(){
 				    if (value.length === 0){	
 						emptyPassword.fadeIn(1000);
 						valid = false;	
-					}else {
+					} else {
 						emptyPassword.fadeOut();	
 						}
 				    }	
 					if(!(input.is('input:password'))){
-					   	if(valueEmail.length === 0){
+				        if(valueEmail.length === 0){
 							emptyEmail.fadeIn(1000);
 							valid = false;
-						}else {
+						} else {
 							emptyEmail.fadeOut();
 						}
 				    }
       					
 					// Проверка валидации email
-					if ( !(input.is('input:password')) ) {                        
-						if ( input.attr('type').toLowerCase() === 'email' ) {
-							if ( valueEmail !== '' ) {	 
+					if (!(input.is('input:password'))) {                        
+						if (input.attr('type').toLowerCase() === 'email') {
+							if (valueEmail !== '') {	 
 	      					    if (pattern.test(valueEmail)) {
 	  							   correctEmail.fadeOut();
 	      						} else {	
@@ -68,19 +67,18 @@ $(document).ready(function(){
                         crashLogin.fadeIn(1000);
                         if(valueEmail =="mail@mail.com" &&  valuePassword == 123){
                             window.location.href='success.html';
-						}else {
+						} else {
                             helpForm.fadeIn(1000);
 							crashLogin.fadeIn(1000);
                             valid = false;
 						}
-                    }					
-					input.on('focus', function(){
-						
+                    }
+                    
+					input.on('focus', function(){						
 						if(input.is('input:password')){
 								emptyPassword.fadeOut();
 								correctPassword.fadeOut();
-
-							}else{
+							} else {
 								emptyEmail.fadeOut();
 								correctEmail.fadeOut();
 								correctPassword.fadeOut();
@@ -91,15 +89,13 @@ $(document).ready(function(){
 						if(input.is('input:password')){
 							    emptyPassword.fadeOut();
 								correctPassword.fadeOut();
-
-							}else {
+							} else {
 								emptyEmail.fadeOut();
 								correctEmail.fadeOut();
 								correctPassword.fadeOut();	
 							}
 				         });
                     });
-
 			}),
 		};
        
