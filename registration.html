@@ -30,13 +30,13 @@
 				<div class="login-form__background">
 					<div class="login-form pt-30 pb-30">
 						<h1 class="text-center login-heading mt-0 pt-0">Регистрация</h1>
-						<form>
-							<div class="notify notify--error mb-20">Введите email</div>
-							<div class="notify notify--error mb-20">Неверный формат email</div>
-							<div class="notify notify--error mb-20">Введите пароль</div>
+						<form id='registration-add-form' action="success.html" novalidate>
+							<div id="empty-email" class="notify notify--error mb-20">Введите email</div>
+							<div id="correct-email" class="notify notify--error mb-20">Неверный формат email</div>
+							<div id="empty-password" class="notify notify--error mb-20">Введите пароль</div>
 							<div class="notify no-paddings">
-								<div class="notify no-radius-bottom notify--error">Данный email уже занят</div>
-								<div class="notify no-radius-top">
+								<div id="crash-login" class="notify no-radius-bottom notify--error">Данный email уже занят</div>
+								<div id="help-form" class="notify no-radius-top error--hiden">
 									<p>Используйте другой email чтобы создать новый аккаунт.</p>
 									<p> Или воспользуйтесь
 										<a href="#!">восстановлением пароля </a>, чтобы войти на сайт.</p>
@@ -45,7 +45,7 @@
 							<input class="input-form-registration" name="email" type="email" placeholder="Email" />
 							<input class="input-form-registration" name="password" type="password" placeholder="Пароль" />
 							<div class="text-center pt-30">
-								<a class="button button--enter" href="#">Регистрация</a>
+								<input class="button button--enter" href="#" type="submit" value="Регистрация"/>
 							</div>
 						</form>
 					</div>
