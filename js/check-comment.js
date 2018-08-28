@@ -53,5 +53,4 @@ $(document).ready(function(){
     // Запускаем модуль
 
     commentFormCheck.init();    
-
 });
