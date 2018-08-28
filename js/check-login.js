@@ -6,14 +6,10 @@ $(document).ready(function(){
 			init: function(){
 
 				// вызов внутренних функций
-
 				this._setUpListeners();
 			},
-
 			_setUpListeners: function(){
-
 				$('#login-add-form').on('submit', formLoginValidation._validateForm);
-
 			},
 
 			_validateForm: (function(event){
@@ -33,8 +29,8 @@ $(document).ready(function(){
                         correctPassword = $('#correct-form'),
                         crashLogin = $('#crash-login'),
                         helpForm = $('#help-form'),
-                        Email = $('input[name=email]'),
-					    Password = $('input[name=email]'),
+                        email = $('input[name=email]'),
+					    password = $('input[name=email]'),
 						pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 
 				if(input.is('input:password')){
@@ -45,7 +41,6 @@ $(document).ready(function(){
 						emptyPassword.fadeOut();	
 						}
 				    }	
-
 					if(!(input.is('input:password'))){
 					   	if(valueEmail.length === 0){
 							emptyEmail.fadeIn(1000);
@@ -56,7 +51,6 @@ $(document).ready(function(){
 				    }
       					
 					// Проверка валидации email
-
 					if ( !(input.is('input:password')) ) {                        
 						if ( input.attr('type').toLowerCase() === 'email' ) {
 							if ( valueEmail !== '' ) {	 
@@ -79,11 +73,10 @@ $(document).ready(function(){
 							crashLogin.fadeIn(1000);
                             valid = false;
 						}
-                    }
-					
+                    }					
 					input.on('focus', function(){
 						
-						if(input.is('input:password')) {
+						if(input.is('input:password')){
 								emptyPassword.fadeOut();
 								correctPassword.fadeOut();
 
@@ -99,7 +92,7 @@ $(document).ready(function(){
 							    emptyPassword.fadeOut();
 								correctPassword.fadeOut();
 
-							}else{
+							}else {
 								emptyEmail.fadeOut();
 								correctEmail.fadeOut();
 								correctPassword.fadeOut();	
@@ -108,11 +101,9 @@ $(document).ready(function(){
                     });
 
 			}),
-
 		};
        
-        // Запускаем модуль
-       
+        // Запускаем модуль       
 		formLoginValidation.init();
 	}());
 });
