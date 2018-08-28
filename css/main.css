@@ -768,7 +768,11 @@ a.badge:active {
 	box-shadow: none!important;
 }
 
-.error-hide {
+.notify--error {
+    display: none;
+}
+
+.error--hiden {
     display: none;
 }
 
