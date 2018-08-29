@@ -777,6 +777,14 @@ a.badge:active {
 	margin-right: 5px;
 }
 
+.notify--error {
+    display: none;
+}
+
+.error--hiden {
+    display: none;
+}
+
 .label-checkbox {
 	display: block;
 	position: relative;
