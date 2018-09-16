@@ -44,8 +44,8 @@ $(document).ready(function(){
                 $('#crashLogin.notify').show();
                 $('#crashLogin').slideDown();
             } else {
-                s('#formRegister').unbind('submit');
-                s('#formRegister').submit();
+                $('#formRegister').unbind('submit');
+                $('#formRegister').submit();
             } 
         }    
     });   

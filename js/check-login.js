@@ -17,7 +17,8 @@ $(document).ready(function(){
             pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i,
             validEmail = false,
             validPass = false,
-            testEmail = 'mail@mail.com';
+            testEmail = 'mail@mail.com',
+            testPass = '123';
         
         // EMAIL не пустой
         if (email == ''){
@@ -38,13 +39,13 @@ $(document).ready(function(){
             validPass = true;
         }
         
-        if (validEmail == true){
-            if (email == testEmail){
-                $('#crashLogin.notify').show();
-                $('#crashLogin').slideDown();
-            } else {
+        if (validEmail == true && validPass == true){
+            if (email == testEmail && password == testPass){
                 $('#loginForm').unbind('submit');
                 $('#loginForm').submit();
+            } else {
+                $('#crashLogin.notify').show();
+                $('#crashLogin').slideDown();
             }
         }
     });   
